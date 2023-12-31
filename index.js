@@ -80,4 +80,4 @@ ComfyJS.onChat = async (user, message, flags, self, extra) => {
   await writer(textMessage, message);
 }
 
-ComfyJS.Init('YOUR-TWITCH-USER');
+ComfyJS.Init('oPaveZ');

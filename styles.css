@@ -9,7 +9,6 @@ html,body {
   padding: 0;
   font-family: "FiraCode NF", "IBM Plex Mono";
   font-weight: 600;
-  background: #282a36;
 }
 
 #chat {
@@ -38,7 +37,7 @@ html,body {
 
 #chat li {
   background-color: transparent;
-  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 0 1px #666666, 4px 4px 10px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   padding: 8px 4px;
   color: #f8f8f2;
