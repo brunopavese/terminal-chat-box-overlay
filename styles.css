@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: "FiraCode NF", "IBM Plex Mono";
+  font-weight: 600;
+  background: #282a36;
+}
+
+#chat {
+  width: 400px;
+  height: 450px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 8px;
+  align-items: flex-start;
+}
+
+#chat::-webkit-scrollbar {
+  display: none;
+}
+
+#chat ul {
+  padding-inline-start: 0;
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat li {
+  background-color: transparent;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  padding: 8px 4px;
+  color: #f8f8f2;
+  width: 100%;
+  display: inline-block;
+  flex-direction: row;
+  word-wrap: break-word;
+}
+
+#chat blockquote {
+  font-size: 1.2rem;
+}
+
+.user-name {
+  color: #50fa7b;
+}
+
+.flag-icon {
+  color:  var(--flag-icon-color);
+}
