@@ -60,7 +60,6 @@ ComfyJS.onChat = async (user, message, flags, self, extra) => {
   var userName = document.createElement("span");
   var caracteres = document.createElement("span");
   var textMessage = document.createElement("span");
-  console.log(extra)
 
   var flag = determineFlag(flags);
 
