@@ -3,32 +3,32 @@ var chat = document.querySelector("#chat>ul");
 const flagMapping = {
   broadcaster: {
     flagIcon: " ",
-    flagIconColor: "#ff5555",
+    flagIconColor: "rgb(254, 0, 0)",
     flagLabel: "root"
   },
   mod: {
     flagIcon: "󱢾 ",
-    flagIconColor: "#ffb86c",
+    flagIconColor: "rgb(255, 255, 0)",
     flagLabel: "mod"
   },
   highlighted: {
     flagIcon: " ",
-    flagIconColor: "#f1fa8c",
+    flagIconColor: "rgb(0, 0, 255)",
     flagLabel: "user"
   },
   subscriber: {
     flagIcon: " ",
-    flagIconColor: "#ff79c6",
+    flagIconColor: "rgb(255, 0, 255)",
     flagLabel: "sub"
   },
   vip: {
     flagIcon: "󰇈 ",
-    flagIconColor: "#bd93f9",
+    flagIconColor: "rgb(0, 255, 255) ",
     flagLabel: "vip"
   },
   default: {
     flagIcon: "~",
-    flagIconColor: "#8be9fd",
+    flagIconColor: "rgb(128, 128, 128)",
     flagLabel: "user"
   }
 };
@@ -68,8 +68,14 @@ ComfyJS.onChat = async (user, message, flags, self, extra) => {
 
   caracteres.innerHTML = `:<span class="flag-icon">${flagMapping[flag].flagIcon}</span>$ `
 
-  caracteres.querySelector('.flag-icon').style.color = flagMapping[flag].flagIconColor;
-
+  const flagColor = flagMapping[flag].flagIconColor;
+  const flagColorWithOpacity = `${flagColor.slice(0, -1)}, 0.5)`;
+  
+  const flagIconElement = caracteres.querySelector('.flag-icon');
+  flagIconElement.style.color = flagColor;
+  flagIconElement.style.textShadow = `0px 0px 20px ${flagColorWithOpacity}`;
+  
+  
   newMessage.appendChild(userName);
   newMessage.appendChild(caracteres);
   newMessage.appendChild(textMessage);
